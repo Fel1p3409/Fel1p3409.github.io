@@ -53,6 +53,7 @@
             font-weight: 700;
             color: var(--cor-texto-principal);
             margin: 0 0 10px 0;
+            line-height: 1.2;
         }
         .section-title h2 span {
             color: var(--cor-amarelo-neon);
@@ -222,7 +223,7 @@
 
         /* --- Seção de Captura --- */
         #capture-form {
-            background-color: var(--cor-cinza-card);
+            background-color: #000;
         }
         .form-box {
             max-width: 600px;
@@ -451,6 +452,7 @@
     </footer>
 
     <script>
+        // Script para o formulário
         const form = document.getElementById('lead-form');
         form.addEventListener("submit", e => {
             e.preventDefault();
@@ -459,10 +461,7 @@
             submitButton.disabled = true;
             submitButton.textContent = 'ENVIANDO...';
 
-            // ATENÇÃO: Verifique se este é o link correto da sua implantação do Google Script
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwof2CXa8DX28wjQBTt4HFPFgeVF28CXfIB6EGLGIXAXlyPyniDl4aNvrfTZQ7w5pA0/exec';
-            
-            // ATENÇÃO: Verifique se este é o link correto do seu grupo de WhatsApp
             const whatsappURL = 'https://chat.whatsapp.com/ImQP6AhyldABBXk7deRCLR';
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
@@ -479,3 +478,4 @@
 
 </body>
 </html>
+
